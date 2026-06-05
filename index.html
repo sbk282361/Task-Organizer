@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Task Organizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <h1>Task Organizer <span>🗒️</span></h1>
+    </header>
+
+    <nav class="main-nav">
+        <button id="btnAll" class="nav-btn">All Tasks View</button>
+        <button id="btnCat" class="nav-btn active">Category View</button>
+    </nav>
+
+    <main id="category-view" style="display: block;">
+        <div class="board-grid">
+            <section class="subject-column physics">
+                <div class="subject-badge">Physics</div>
+                <div id="physicsList"></div>
+                <div class="input-area">
+                    <input type="text" id="physicsInput" placeholder="+ New task || right click to del!">
+                    <input type="text" id="physicsDeadline" placeholder="Deadline (e.g. May 28)">
+                    <button id="addPhysicsBtn">Add Task</button>
+                </div>
+            </section>
+
+            <section class="subject-column ins">
+                <div class="subject-badge">INS</div>
+                <div id="insList"></div>
+                <div class="input-area">
+                    <input type="text" id="insInput" placeholder="+ New task">
+                    <input type="text" id="insDeadline" placeholder="Deadline...">
+                    <button id="addInsBtn">Add Task</button>
+                </div>
+            </section>
+
+            <section class="subject-column math">
+                <div class="subject-badge">Math</div>
+                <div id="mathList"></div>
+                <div class="input-area">
+                    <input type="text" id="mathInput" placeholder="+ New task">
+                    <input type="text" id="mathDeadline" placeholder="Deadline...">
+                    <button id="addMathBtn">Add Task</button>
+                </div>
+            </section>
+
+            <section class="subject-column biology">
+                <div class="subject-badge">Biology</div>
+                <div id="biologyList"></div>
+                <div class="input-area">
+                    <input type="text" id="biologyInput" placeholder="+ New task">
+                    <input type="text" id="biologyDeadline" placeholder="Deadline...">
+                    <button id="addBiologyBtn">Add Task</button>
+                </div>
+            </section>
+
+            <section class="subject-column spanish">
+                <div class="subject-badge">Spanish</div>
+                <div id="spanishList"></div>
+                <div class="input-area">
+                    <input type="text" id="spanishInput" placeholder="+ New task">
+                    <input type="text" id="spanishDeadline" placeholder="Deadline...">
+                    <button id="addSpanishBtn">Add Task</button>
+                </div>
+            </section>
+
+            <section class="subject-column arts">
+                <div class="subject-badge">Arts</div>
+                <div id="artsList"></div>
+                <div class="input-area">
+                    <input type="text" id="artsInput" placeholder="+ New task">
+                    <input type="text" id="artsDeadline" placeholder="Deadline...">
+                    <button id="addArtsBtn">Add Task</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section id="all-tasks-view" style="display: none;">
+        <table class="task-table">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Task Name</th>
+                    <th>Deadline</th>
+                    <th>Done?</th>
+                </tr>
+            </thead>
+            <tbody id="masterTable">
+                </tbody>
+        </table>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
